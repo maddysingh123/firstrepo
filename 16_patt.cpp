@@ -2,23 +2,15 @@
 using namespace std;
 
 int main() {
-  
-  int size = 5, alpha = 65, num = 0;
+  // size of cross, use odd number
+  int size = 5;
+
   for (int i = 0; i < size; i++) {
-    // print spaces
-    for (int j = 0; j < size - i - 1; j++) {
-      cout << " ";
-    }
-    // print alphabets
-    for (int k = 0; k < 2 * i + 1; k++) {
-      if (i == 0 || i == size - 1) {
-        cout << ((char)(alpha+num++));
+    for (int j = 0; j < size; j++) {
+      if (i==j || i+j==size-1) {
+        cout << "*";
       } else {
-        if (k == 0 || k == 2 * i) {
-          cout << ((char)(alpha + num++));
-        } else {
-          cout << " ";
-        }
+        cout << " ";
       }
     }
     cout << "\n";
